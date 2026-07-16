@@ -1,6 +1,7 @@
 import { NextFunction, Request, Response } from "express";
 import { IUser } from "../models/User.js";
 import  jwt  from "jsonwebtoken";
+import { User } from "../models/User.js";
 
 
 

@@ -1,10 +1,11 @@
 import dns from 'dns';
 dns.setServers(['8.8.8.8' , '8.8.4.4']);
 import "dotenv/config";
-import express, { NextFunction } from 'express';
+import express, { NextFunction,Request,Response } from 'express';
 import cors from "cors";
 import connectDB from "./config/db.js"
 import authRouter from './routes/authRoutes.js';
+import restaurantRouter from './routes/restaurantRoutes.js';
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get('/', (req,res) => {
     res.send('Server is Live!');
 });
 app.use("/api/auth",authRouter)
+app.use("/api/restaurants",restaurantRouter)
 
 
 //Global Error Handler

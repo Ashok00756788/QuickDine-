@@ -8,6 +8,7 @@ import authRouter from './routes/authRoutes.js';
 import restaurantRouter from './routes/restaurantRoutes.js';
 import bookingRouter from './routes/bookingRiutes.js';
 import ownerRouter from './routes/ownerRoutes.js';
+import adminRouter from './routes/adminRouters.js';
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use("/api/auth",authRouter)
 app.use("/api/restaurants",restaurantRouter)
 app.use("/api/bookings",bookingRouter)
 app.use("/api/bookings",ownerRouter)
+app.use("/api/admin",adminRouter)
 
 
 
